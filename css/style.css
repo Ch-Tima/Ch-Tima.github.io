@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #373e47;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.container-v-center{
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    width: 100%;
+}
+
+.main{
+    min-width: 280px;
+    max-width: 572px;
+    background-color: #2d333b;
+    border-radius: 1em;
+    margin: 0 auto;
+    padding: .75em 0;
+}
+
+.avatar-user{
+    border-radius: 50%;
+    height: auto;
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    border: .3em solid #89D1D9;
+}
+
+.names p{
+    text-align: center;
+    color: white;
+    font-family: monospace;
+}
+
+.real-name{
+    margin-top: .25em;
+    font-size: xx-large;
+}
+.nick{
+    font-size: larger;
+    color: lightslategray !important;
+}
+
+
+.links{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.links a{
+    margin: 0 .375em;
+}
+
+.links a svg{
+    width: 37px;
+    height: auto;
+}
+
+.links a svg:hover{
+    fill: #89D1D9 !important;
+}
+
+.projectes{
+    display: block;
+    padding: 0 .5em;
+}
+
+.projectes div{
+    background-color: #89D1D9;
+    border-radius: 1em;
+    width: 100%;
+    height: 75px;
+    margin: .4em 0;
+}
