@@ -1,0 +1,73 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #373e47;
+}
+
+.container {
+    position: relative;
+}
+
+.circle {
+    border: .15em solid #2d333b;
+    box-shadow: inset 0px 0px 1em -5px #525e6f, 0px 0px 1em -5px #525e6f;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: .25s;
+    width: 82vw;
+    height: 82vw;
+    max-width: 82vh;
+    max-height: 82vh;
+}
+
+/* .circle:hover{
+    transform: scale(1.05);
+} */
+
+.item{
+    border-radius: 50%;
+    position: absolute;
+    background-color: red;
+    box-shadow: 0px 0px 1em -5px wheat;
+}
+
+.item:hover{
+    box-shadow: -10px 0 80px #f0f, 10px 0 80px #0ff;
+}
+
+
+/* test */
+@keyframes rotate360l {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
+
+@keyframes rotate360r {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+  } 
+
+.rotate-l {
+  /* animation: rotate360l 25s linear infinite; */
+}
+.rotate-l:hover {
+    animation-play-state: paused;
+}
+
+.rotate-r {
+  /* animation: rotate360r 25s linear infinite; */
+}
+.rotate-r:hover {
+    animation-play-state: paused;
+}
