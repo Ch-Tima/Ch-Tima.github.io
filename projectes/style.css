@@ -7,6 +7,16 @@ body{
     background-color: #373e47;
 }
 
+a, p, img{
+  user-select: none;
+}
+
+p{
+  color: #373e47;
+  font-family: monospace;
+  font-size: 105%;
+}
+
 .container {
     position: relative;
 }
@@ -41,11 +51,13 @@ body{
   box-shadow: 0px 0px 2em #8A63A7, 0px 0px 2em #89d1d9;
 }
 
-
 .item-details{
-  background: #89d1d9;
+  display: grid;
+  padding-left: 10px;
+  border-radius: 0 .5em .5em 0;
+  background: #98d8df;
   position: absolute;
-  z-index: 0;
+  z-index: 11;
   top: 50%;
   bottom: 50%;
   opacity: 0;
@@ -53,8 +65,8 @@ body{
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
-.item:hover + .item-details {
-  transform: translate(15%, -50%) scaleX(1);
+.item:hover + .item-details, .item-details:hover {
+  transform: translate(5%, -50%) scaleX(1);
   opacity: 1;
 }
 
