@@ -3,7 +3,7 @@ const circle = $('#main');
 
 let itemSize = 80;
 let countCirlce = 1;
-let winWidth = 0;
+let winSize = 0;
 
 const list = [
     [
@@ -14,7 +14,7 @@ const list = [
                 git: "https://github.com/Ch-Tima/WebBeautyBook",
                 web: "https://appwebbeautybook.azurewebsites.net"
             },
-            img: ""
+            img: "img/B.png"
         },
         {
             title: "CurrencyConverter",
@@ -24,13 +24,6 @@ const list = [
                 playStore: "https://play.google.com/store/apps/details?id=com.chtima.currencyconverter"
             },
             img: "img/CC.png"
-        },
-        {
-            title: "Movie",
-            links:{
-                git: "https://github.com/Ch-Tima/Movie-net-6.0",
-            },
-            img: ""
         },
         {
             title: "Flashlight",
@@ -58,12 +51,12 @@ const list = [
             img: "img/G-lib.png"
         },
         {
-            title: "WebAds",
+            title: "Movie",
             links:{
-                git: "https://github.com/Ch-Tima/WebAds",
+                git: "https://github.com/Ch-Tima/Movie-net-6.0",
             },
-            img: ""
-        }
+            img: "img/M.png"
+        },
     ], 
     [
         {
@@ -78,9 +71,9 @@ const list = [
 
 $(function (){
     $(window).bind("resize", rerender);
-    rerender();
-});
-
+     rerender();
+ });
+ 
 function createCircle(scale, indexProject){
     countCirlce++;
     let qE = $("<div>").addClass(countCirlce%2==0 ? "rotate-l" : "rotate-r").css({
@@ -101,10 +94,18 @@ function rerender(){
     $("#hugeDetails").remove();
     countCirlce = 1;
 
+    //
+    if(getOrientation() == 'portrait'){
+        $("body").css({"height": "80vh"})
+    }else{
+        $("body").css({"height": ""})
+    }
+
     //calc item size
-    winWidth = $(window).width();
-    itemSize = winWidth >= 750 ? 80 : winWidth <= 750 && winWidth >= 540 ? 70 : 55
-    
+    let win = $(window);
+    winSize = win.width() < win.height() ? win.width() : win.height();
+    itemSize = winSize >= 750 ? 80 : winSize <= 750 && winSize >= 540 ? 70 : 48
+
     //draw diograna
     addProjectes(circle, list[0])
     createCircle(0.68, 1).appendTo(container);
@@ -129,9 +130,9 @@ function addProjectes(qE, arr){
             "background-repeat": "no-repeat"
         }).on("mouseenter", () => showDetails(arr[i], item)))
         .append($("<div>").addClass("item-details").css({
-            width: `${175}px`,
+            "width": '175px',
             height: `${itemSize-5}px`,
-            left: `${itemSize/2.25}px`,
+            left: `${itemSize/1.8}px`,
         }));
 
         qE.append(item)
@@ -139,18 +140,24 @@ function addProjectes(qE, arr){
 }
 
 function showDetails(event, element){
-    console.log(event)
-
     let links = [];
     for (var key in event.links) {
+        let sizeLink = 0 
+        if(winSize > 800 && getOrientation() == 'landscape'){
+            sizeLink = 30
+        }else if(winSize < 800 && getOrientation() == 'landscape'){
+            sizeLink = 20
+        }else{
+            sizeLink = 40
+        }
         links.push($("<a>").attr("href", event.links[key]).append($("<img>").attr('src', `../assets/svg/${key}.svg`).css({
-            'width': `${winWidth > 800 ? 28 : (winWidth < 800 && winWidth > 500 ? 55 : 35)}px`,
+            'width': `${sizeLink}px`,
             'height': 'auto',
-            'margin': `${winWidth < 800 ? 5 : 0}px ${winWidth < 800 ? 10 : 5}px`
+            'margin': `${winSize < 800 ? 2 : 5}px ${winSize < 800 ? 5 : 8}px ${0}px ${winSize < 800 ? 5 : 8}px`
         })))
     }
 
-    if(winWidth < 800){
+    if(winSize < 800 && getOrientation() == 'portrait'){
         $("#hugeDetails").remove();
         $("body").append
         (
@@ -161,7 +168,7 @@ function showDetails(event, element){
                 'position': 'absolute',
                 'bottom': '0'
             }).attr("id", "hugeDetails")
-            .append($("<p>").text(event.title).addClass("title-xxl"))
+            .append($("<p>").text(event.title).addClass("title-xxl text-center"))
             .append($("<div>").addClass("df-center").append(links))
         )
     }else{
@@ -169,7 +176,7 @@ function showDetails(event, element){
         let details = $(element).children(".item-details");
 
         details.children().remove();
-        details.append($("<p>").text(event.title).addClass("text-center")).append($("<div>").addClass("df-center").append(links));
+        details.append($("<p>").text(event.title).addClass(`text-center ${ winSize > 800 && getOrientation() == 'landscape' ? 'title-l': 'title-m'}`)).append($("<div>").addClass("df-center").append(links));
         
         item.addClass("item-on");
         details.addClass("item-details-on");
@@ -191,4 +198,8 @@ function showDetails(event, element){
     }
 
 
+}
+
+function getOrientation(){
+    return window.innerWidth > window.innerHeight ? "landscape" : "portrait";;
 }

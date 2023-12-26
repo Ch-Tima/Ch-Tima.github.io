@@ -14,7 +14,7 @@ a, p, img{
 p{
   color: #373e47;
   font-family: monospace;
-  font-size: 105%;
+  font-size: 110%;
 }
 
 .container {
@@ -27,10 +27,10 @@ p{
     border-radius: 50%;
     background-color: transparent;
     transition: .25s;
-    width: 82vw;
-    height: 82vw;
-    max-width: 82vh;
-    max-height: 82vh;
+    width: 83vw;
+    height: 83vw;
+    max-width: 83vh;
+    max-height: 83vh;
 }
 
 .circle:hover{
@@ -53,7 +53,6 @@ p{
   border-radius: 0 .5em .5em 0;
   background: #98d8df;
   position: absolute;
-  z-index: 1;
   top: 50%;
   bottom: 50%;
   opacity: 0;
@@ -69,7 +68,14 @@ p{
 .item-on{
   box-shadow: 0px 0px 2em #8A63A7, 0px 0px 2em #89d1d9;
   background-color: #89d1d9;
+  z-index: 4;
+
 }
+
+.item-details.item-details-on{
+  z-index: 3;
+}
+
 
 .circle:hover .item{
   background-color: #89d1d9;
@@ -80,8 +86,17 @@ p{
   color: #373e47;
   font-family: monospace;
   font-size: xx-large;
-  margin: 0 auto;
-  text-align: center;
+}
+
+.title-l{
+  color: #373e47;
+  font-family: monospace;
+}
+
+.title-m{
+  color: #373e47;
+  font-family: monospace;
+  font-size: medium;
 }
 
 .text-center{
