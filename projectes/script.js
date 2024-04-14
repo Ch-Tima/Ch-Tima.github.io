@@ -11,8 +11,7 @@ const list = [
         {
             title: "WebBeautyBook",
             links:{
-                git: "https://github.com/Ch-Tima/WebBeautyBook",
-                web: "https://appwebbeautybook.azurewebsites.net"
+                git: "https://github.com/Ch-Tima/WebBeautyBook"
             },
             img: "img/B.png"
         },
