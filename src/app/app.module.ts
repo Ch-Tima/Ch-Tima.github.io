@@ -10,13 +10,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { CurrencyConverterComponent } from './privacypolicy/currency-converter/currency-converter.component';
 import { WalletTrackerComponent } from './privacypolicy/wallet-tracker/wallet-tracker.component';
 
-const routes: Routes = [
 
-  { path: '', component: HomeComponent, pathMatch: "full" },
-  { path: 'privacypolicy/wallet_tracker', component: WalletTrackerComponent},
-  { path: 'privacypolicy/currency_converter', component: CurrencyConverterComponent},
-  
-];
 
 @NgModule({
   declarations: [
@@ -28,7 +22,6 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
