@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url('assets/font/Pacifico-Regular.ttf') format('truetype');
+    
+}
+
+@font-face {
+    font-family: 'Alata';
+    src: url('assets/font/Alata-Regular.ttf') format('truetype');
+}
+
+@import 'ngx-toastr/toastr';
+
+p, h1, h2, h3, h4, h5, h6, .toast-title, .toast-message{
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+.text-s{
+    font-size: 15px;
+}
+
+.text-m{
+    font-size: 18px;
+}
+.text-l{
+    font-size: 21px;
+}
+
+.text-xl{
+    font-size: 28px;
+}
+
+.text-zxl{
+    font-size: 32px;
+}

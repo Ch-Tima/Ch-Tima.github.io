@@ -1,0 +1,124 @@
+<div class="main">
+
+    <div class="container">
+
+        <div *ngIf="states === 'showLeft' || states === 'none'" [@bounceInUpTrigger] (@bounceInUpTrigger.done)="(hindLeft())">
+            <div class="left">
+
+                <div class="img-center">
+                    <img src="../../assets/ime.png"/>
+                </div>
+    
+                <div class="text-center">
+                    <p>Tymofii Chyzhevskyi</p>
+                </div>
+    
+                <div class="download-link">
+                    <a download="Chyzhevskyi_Tymofii_CV.pdf" href="../../assets//pdf/Chyzhevskyi_Tymofii_CV.pdf">
+                        <p>Download CV</p>
+                    </a>
+                </div>
+    
+            </div>
+        </div>
+
+
+
+        <div *ngIf="states === 'showRight' || states === 'none'" @bounceInUpTrigger (@bounceInUpTrigger.done)="(hindRight())">
+
+           <div class="right">
+            <div class="more-about">
+                <p class="title">More about me:</p>
+                <div class="list-links">
+                    <a class="link" href="https://www.linkedin.com/in/tymofii-chyzhevskyi2004/">
+                        <div class="icon">
+                            <img src="../../assets/svg/linkedin.svg">
+                        </div>
+                        <p class="text">LinkedIn</p>
+                    </a>
+
+                    <a class="link" href="https://github.com/Ch-Tima">
+                        <div class="icon">
+                            <img src="../../assets/svg/github.svg">
+                        </div>
+                        <p class="text">Github</p>
+                    </a>
+
+                    <a class="link" href="https://play.google.com/store/apps/developer?id=Ch-Tima">
+                        <div class="icon">
+                            <img src="../../assets/svg/play_store.svg">
+                        </div>
+                        <p class="text">PlayStore</p>
+                    </a>
+
+
+                    <a class="link" href="https://ko-fi.com/chtima">
+                        <div class="icon">
+                            <img src="../../assets/svg/ko-fi.svg">
+                        </div>
+                        <p class="text">ko-fi</p>
+                    </a>
+
+                    <a class="link" href="#" (click)="todo()">
+                        <div class="icon">
+                            <img src="../../assets/svg/box3d.svg">
+                        </div>
+                        <p class="text">MyProjects</p>
+                    </a>
+
+                    <a class="link" href="#" (click)="todo()">
+                        <div class="icon">
+                            <img src="../../assets/svg/camera.svg">
+                        </div>
+                        <p class="text">Photos</p>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="skills">
+                <p class="title">Tech skills:</p>
+                <div class="list-skills">
+                    <div class="i-skills">
+                        <img src="../../assets/svg/csharp.svg"/>
+                    </div>
+                    <div class="i-skills">
+                        <img src="../../assets/svg/android.svg"/>
+                    </div>
+                    <div class="i-skills">
+                        <img src="../../assets/svg/angular.svg"/>
+                    </div>
+                    <div class="i-skills">
+                        <img src="../../assets/svg/net.svg">
+                    </div>
+                    <div class="i-skills">
+                        <img src="../../assets/svg/html.svg"/>
+                    </div>
+                    <div class="i-skills">
+                        <img src="../../assets/svg/css.svg"/>
+                    </div>
+                    <div class="i-skills">
+                        <img src="../../assets/svg/javascript.svg"/>
+                    </div>
+                    <div class="i-skills">
+                        <img src="../../assets/svg/azure.svg"/>
+                    </div>
+                    <div class="i-skills">
+                        <img src="../../assets/svg/firebase.svg"/>
+                    </div>
+                    <div class="i-skills">
+                        <img src="../../assets/svg/java.svg"/>
+                    </div>
+                </div>
+            </div>
+           </div>
+
+        </div>
+
+        <div class="arrow" [@bounceInOnEnter] *ngIf="states !== 'wait'">
+            <img src="../../assets/svg/arrow_downward.svg" (click)="next()">
+        </div>
+
+
+    </div>
+</div>
