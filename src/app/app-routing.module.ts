@@ -9,8 +9,8 @@ import { WalletTrackerComponent } from './privacypolicy/wallet-tracker/wallet-tr
 const routes: Routes = [
 
   { path: '', component: HomeComponent, pathMatch: "full" },
-  { path: 'privacypolicy/wallet_tracker', component: WalletTrackerComponent},
-  { path: 'privacypolicy/currency_converter', component: CurrencyConverterComponent},
+  { path: 'privacypolicy-wallettracker', component: WalletTrackerComponent},
+  { path: 'privacypolicy-currencyconverter', component: CurrencyConverterComponent},
   
 ];
 
