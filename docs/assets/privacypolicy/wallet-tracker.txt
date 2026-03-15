@@ -1,0 +1,104 @@
+Privacy Policy
+
+Effective date: 27 February 2026
+
+This Privacy Policy applies to the WalletTracker mobile application (the “Application”), developed by Ch-Tima (the “Service Provider”). The Application is provided as a free service.
+
+1. Overview
+
+The Application is designed to store financial data locally on your device. The Service Provider does not operate any backend servers and does not directly collect or store your personal financial data.
+
+2. Data Stored Locally on Your Device
+
+All user-generated data, including:
+
+- transactions
+
+- categories
+
+- wallet information
+
+- financial records
+
+is stored exclusively on your device.
+
+The Service Provider does not have access to this data.
+The data is not transmitted to external servers.
+
+If you choose to create a backup, it is stored only in the location you select on your device.
+
+3. Automatically Collected Data (Third-Party Services)
+The Application uses the following third-party services:
+
+- Google Analytics for Firebase
+
+- Firebase Crashlytics
+
+These services may automatically collect limited technical information, such as:
+
+- device model
+- operating system version
+- app version
+- country (derived from IP address)
+- anonymous usage statistics
+- crash reports and diagnostic information
+
+This information is used solely to:
+
+- improve application stability
+- fix bugs
+- analyze general usage trends
+- enhance performance
+
+The Service Provider does not use this data to identify individual users.
+
+For more information, please review Google’s privacy policy:
+
+https://policies.google.com/privacy
+
+https://firebase.google.com/support/privacy/
+
+4. No Advertising
+
+The Application does not display advertisements and does not use advertising identifiers for marketing or tracking purposes.
+
+5. Data Sharing
+
+The Service Provider does not sell, trade, or rent user data.
+
+Data may be processed by Google as described above solely for analytics and crash reporting purposes.
+
+Information may be disclosed only if required by law.
+
+6. Data Retention
+
+User-created data remains on your device until you delete it or uninstall the Application.
+
+Analytics and crash data are retained according to Google’s data retention policies.
+
+7. Children’s Privacy
+
+The Application is not directed at children under the age of 13.
+The Service Provider does not knowingly collect personal information from children.
+
+If you believe a child has provided personal data, please contact the Service Provider so appropriate action can be taken.
+
+8. Security
+
+Because all financial data is stored locally on your device, its security depends on your device’s protection mechanisms (such as device lock and encryption).
+
+The Service Provider takes reasonable measures to ensure third-party services are reputable and secure.
+
+9. Your Rights
+
+Depending on your location (including the European Union and California), you may have rights regarding your personal data, including the right to request deletion of data processed by third-party services.
+
+For such requests, please contact the Service Provider.
+
+10. Changes to This Policy
+
+This Privacy Policy may be updated from time to time. Changes will be reflected on this page with an updated effective date.
+
+11. Contact
+If you have any questions regarding this Privacy Policy, please contact:
+help.chtima@gmail.com
